@@ -121,5 +121,6 @@ object Form1: TForm1
     Width = 305
     Height = 21
     TabOrder = 7
+    OnChange = e3Change
   end
 end

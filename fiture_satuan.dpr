@@ -2,7 +2,7 @@ program fiture_satuan;
 
 uses
   Forms,
-  Unit1 in '..\uuu\Unit1.pas' {Form1},
+  Unit1 in '..\UTS VISUAL2\Unit1.pas' {Form1},
   Unit2 in 'Unit2.pas' {DataModule2: TDataModule};
 
 {$R *.res}

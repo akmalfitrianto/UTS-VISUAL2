@@ -23,6 +23,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
+    procedure e3Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -79,7 +80,15 @@ end;
 procedure TForm1.DBGrid1CellClick(Column: TColumn);
 begin
 e1.Text := DataModule2.ZQuery1.Fields[1].AsString;
+e2.Text := DataModule2.ZQuery1.Fields[2].AsString;
 a := DataModule2.ZQuery1.Fields[0].AsString;
+end;
+
+procedure TForm1.e3Change(Sender: TObject);
+begin
+DataModule2.ZQuery1.SQL.Clear;
+DataModule2.ZQuery1.SQL.Add('select * from satuan where nama like "%'+e3.Text+'%"');
+DataModule2.ZQuery1.Open;
 end;
 
 end.
